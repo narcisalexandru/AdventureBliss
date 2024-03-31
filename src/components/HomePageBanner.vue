@@ -17,7 +17,6 @@
 }
 .banner-text-color {
     color: #233E2F;
-    font-family: Chamberi;
     font-weight: 800;
 }
 .image {

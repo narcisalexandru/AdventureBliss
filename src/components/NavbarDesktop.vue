@@ -93,6 +93,7 @@ export default {
 <style>
 .p-menubar {
     background-color: #233E2F;
+    margin: 2px;
 }
 .p-submenu-list {
     background-color: #233E2F;
