@@ -36,8 +36,8 @@ export default defineComponent({
                     icon: 'pi pi-home',
                     items: [
                         {
-                            label: 'Curs - 1',
-                            route: '/cursuri/curs-1'
+                            label: 'Shelter',
+                            route: '/cursuri/shelter'
                         },
                         {
                             label: 'Curs - 2',
