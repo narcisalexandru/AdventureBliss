@@ -15,15 +15,15 @@
         </div>
         <img src="@\assets\images\sloganL.jpeg" alt="slogan" class="w-full">
     </div>
-    <div class="flex flex-column w-5 pb-3 align-items-end">
-        <div class="flex pb-3 justify-content-center w-8">
+    <div class="flex flex-column w-5 align-items-end">
+        <div class="flex pb-3 justify-content-center w-9">
             <div class="flex justify-content-center w-12 box text-6xl">
-                <div class="text-center flex flex-wrap opacity-80 w-4 text p-3">
+                <div class="text-center flex flex-wrap opacity-80 w-6 text p-3">
                     Trăiește liber
                 </div>
             </div>
         </div>
-        <img src="@\assets\images\sloganR.jpeg" alt="slogan" class="w-8">
+        <img src="@\assets\images\sloganR.jpeg" alt="slogan" class="w-9">
     </div>
 </div>
 </template>

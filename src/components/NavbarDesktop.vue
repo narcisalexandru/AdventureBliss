@@ -1,37 +1,22 @@
-
+<!-- NavbarDesktop.vue -->
 <template>
     <div class="card">
         <div class="flex flex-column md:flex-row md:justify-content-between row-gap-3">
-            <Menubar class="w-full justify-content-between border-none border-noround" :model="items">
+            <Menubar class="w-full justify-content-between align-items-center border-none border-noround" :model="items">
                 <template #start>
-                    <a href="/">
+                    <router-link to="/">
                         <img class="w-2 h-2" src="@/assets/images/logo.png" alt="logo" />
-                    </a>
+                    </router-link>
                 </template>
-                <template #item="{ 
-                    item, 
-                    props, 
-                    hasSubmenu
-                    }"
-                    >
-                        <router-link
-                        v-if="item.route" 
-                        v-slot="{ href, navigate }" 
-                        :to="item.route" 
-                        custom
-                        >
-                            <a 
-                            v-ripple 
-                            :href="href" 
-                            v-bind="props.action" 
-                            @click="navigate"
-                            >
-                                <span class="ml-2 ">{{ item.label }}</span>
-                            </a>
+                <template #item="{ item, props, hasSubmenu }">
+                    <router-link v-if="item.route" :to="item.route" custom>
+                        <a v-ripple :href="item.route" v-bind="props.action">
+                            <span class="ml-2">{{ item.label }}</span>
+                        </a>
                     </router-link>
                     <a v-else v-ripple :href="item.url" :target="item.target" v-bind="props.action">
                         <span class="ml-2">{{ item.label }}</span>
-                        <span v-if="hasSubmenu" class="pi pi-fw pi-angle-down ml-2" />
+                        <span v-if="hasSubmenu" class="pi pi-fw pi-angle-down"/>
                     </a>
                 </template>
             </Menubar>
@@ -39,8 +24,10 @@
     </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export default defineComponent({
     data() {
         return {
             items: [
@@ -50,44 +37,40 @@ export default {
                     items: [
                         {
                             label: 'Curs - 1',
-                            url: '/curs1'
+                            route: '/cursuri/curs-1'
                         },
                         {
                             label: 'Curs - 2',
-                            url: '/curs-2'
+                            route: '/cursuri/curs-2'
                         },
                         {
                             label: 'Curs - 3',
-                            url: '/curs1'
+                            route: '/cursuri/curs-3'
                         },
                         {
                             label: 'Curs - 4',
-                            url: '/curs1'
+                            route: '/cursuri/curs-4'
                         },
                         {
                             label: 'Curs - 5',
-                            url: '/curs1'
+                            route: '/cursuri/curs-5'
                         }
                     ]
                 },
                 {
                     label: 'Despre noi',
                     icon: 'pi pi-link',
-                    command: () => {
-                        this.$router.push('/despre-noi');
-                    }
+                    route: '/despre-noi'
                 },
                 {
                     label: 'Intrebari frecvente',
                     icon: 'pi pi-link',
-                    command: () => {
-                        this.$router.push('/intrebari-frecvente');
-                    }
+                    route: '/intrebari-frecvente'
                 },
             ]
         };
     }
-};
+});
 </script>
 
 <style>

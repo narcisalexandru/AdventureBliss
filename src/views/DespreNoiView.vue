@@ -1,4 +1,3 @@
-<!-- CursuriView.vue -->
 <template>
     <div class="flex justify-content-center">
         <div>
