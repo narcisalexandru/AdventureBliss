@@ -3,7 +3,7 @@ import rightImage from '@/assets/images/banner.jpeg';
 
 export const shelter = {
     id: 'shelter',
-    name: 'Supraviețuirea în Sălbăticie pe Timpul Iernii',
+    name: 'Adapost pe timp de iarna',
     image: bannerImage,
     rightImage: rightImage,
     introduction: 'Supraviețuirea în sălbăticie pe timpul iernii poate fi o provocare, dar construirea unui adăpost sub zăpadă poate oferi căldură și protecție împotriva vântului și a frigului extrem. Mai jos este un ghid detaliat despre cum să supraviețuiești și să construiești un astfel de adăpost, precum și lista lucrurilor necesare.',
@@ -23,5 +23,7 @@ export const shelter = {
         'Verificați regulat aceste orificii pentru a nu se bloca cu zăpadă.',
     ],
     
-    link: 'https://www.example.com'
+    link: 'https://www.google.com',
+    credits: 'OutDoorBoys'
+
 };
