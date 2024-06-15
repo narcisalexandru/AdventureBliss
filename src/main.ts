@@ -9,6 +9,7 @@ import PrimeVue from 'primevue/config';
 
 import Menubar from 'primevue/menubar';
 import Button from 'primevue/button';
+import Image from 'primevue/image';
 
 import App from './App.vue'
 import router from './router'
@@ -21,5 +22,6 @@ app.use(PrimeVue)
 
 app.component('Menubar', Menubar);
 app.component('Button', Button);
+app.component('Image', Image);
 
 app.mount('#app')

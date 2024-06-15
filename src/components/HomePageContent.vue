@@ -5,7 +5,7 @@
                 AdventureBliss
             </div>
         </div>
-        <div class="flex w-full justify-content-center align-items-center p-8">
+        <div class="flex w-12 justify-content-center align-items-center p-10">
             <div class="flex flex-column w-6">
                 <div class="flex flex-row pb-3 gap-3">
                     <div class="flex flex-row justify-content-center box w-8 text-6xl">
@@ -19,7 +19,9 @@
                         </div>
                     </div>
                 </div>
-                <img src="@\assets\images\sloganL.jpeg" alt="slogan" class="w-full">
+                <div class="card flex justify-center">
+                    <Image src="src\assets\images\sloganL.jpeg" alt="Image" width="790" height="590" />
+                </div>
             </div>
             <div class="flex flex-column w-5 align-items-end">
                 <div class="flex pb-3 justify-content-center w-9">
@@ -29,7 +31,9 @@
                         </div>
                     </div>
                 </div>
-                <img src="@\assets\images\sloganR.jpeg" alt="slogan" class="w-9">
+                <div class="card flex justify-center">
+                    <Image src="src\assets\images\sloganR.jpeg" alt="Image" width="495" height="590" />
+                </div>
             </div>
         </div>
     </section>
@@ -57,5 +61,12 @@
 .image {
     opacity: 70%;
     background-image: url('C:\Users\Narcis\OneDrive\Desktop\AdventureBliss\frontend\src\assets\images\banner.jpeg');
+}
+
+.p-10 {
+    padding-right: 10rem;
+    padding-left: 10rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 }
 </style>
