@@ -11,7 +11,7 @@
     <div class="flex text justify-content-center align-items-center m-4">
         <h1 class="text-6xl font-bold">{{ course.name }}</h1>
     </div>
-    <div class="flex justify-content-start text align-items-center gap-8 w-12 h-screen p-6">
+    <div class="flex justify-content-start text align-items-center gap-8 w-12 h-screen p-8">
         <div class="max-w-4xl w-6 px-8 py-5 bg-color">
             <!-- Need Section -->
             <section class="mb-5">
