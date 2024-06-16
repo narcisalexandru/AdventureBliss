@@ -9,7 +9,10 @@ import PrimeVue from 'primevue/config';
 
 import Menubar from 'primevue/menubar';
 import Button from 'primevue/button';
-import Image from 'primevue/image';
+import Rating from 'primevue/rating';
+import InputText from 'primevue/inputtext';
+import Textarea from 'primevue/textarea';
+
 
 import App from './App.vue'
 import router from './router'
@@ -22,6 +25,8 @@ app.use(PrimeVue)
 
 app.component('Menubar', Menubar);
 app.component('Button', Button);
-app.component('Image', Image);
+app.component('Rating', Rating);
+app.component('InputText', InputText);
+app.component('Textarea', Textarea);
 
 app.mount('#app')

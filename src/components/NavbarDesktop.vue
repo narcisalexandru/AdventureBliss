@@ -1,7 +1,7 @@
 <!-- NavbarDesktop.vue -->
 <template>
     <div class="card">
-        <div class="flex flex-column md:flex-row md:justify-content-between row-gap-3">
+        <div class="flex flex-column md:flex-row md:justify-content-between row-gap-3 px-5">
             <Menubar class="w-full justify-content-between align-items-center border-none border-noround" :model="items">
                 <template #start>
                     <router-link to="/">

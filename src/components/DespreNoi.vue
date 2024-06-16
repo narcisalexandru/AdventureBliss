@@ -16,7 +16,7 @@
 <style>
 .section-background-text-color {
     background: rgb(35,62,47);
-    background: linear-gradient(180deg, rgba(35,62,47,1) 0%, rgba(83,111,96,1) 100%);
+    background: radial-gradient(circle, rgba(83,111,96,1) 0%, rgba(35,62,47,1) 87%);
     color: #F9F6E7;
 }
 </style>
