@@ -24,6 +24,11 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import('@/views/IntrebariFrecventeView.vue')
     },
     {
+        path: '/all-reviews',
+        name: 'all-reviews',
+        component: () => import('@/views/AllReviewsView.vue')
+      },
+    {
         path: '/:pathMatch(.*)*',
         redirect: '/'
     }

@@ -2,14 +2,16 @@
     <HomePageContent />
     <section class="px-10">
         <DespreNoi />
-        <ReviewSection />
+        <!-- <ReadReviewSection /> -->
+        <!-- <WriteReviewSection /> -->
     </section>
 </template>
 
 <script setup lang="ts">
 import HomePageContent from "@/components/HomePageContent.vue";
 import DespreNoi from "@/components/DespreNoi.vue";
-import ReviewSection from "@/components/ReviewSection.vue";
+import WriteReviewSection from "@/components/WriteReviewSection.vue";
+import ReadReviewSection from "@/components/ReadReviewSection.vue";
 </script>
 
 
