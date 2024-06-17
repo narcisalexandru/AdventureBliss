@@ -36,8 +36,8 @@ export default defineComponent({
                     icon: 'pi pi-home',
                     items: [
                         {
-                            label: 'Shelter',
-                            route: '/cursuri/shelter'
+                            label: 'Curs 1: Camping sub zăpadă',
+                            route: '/cursuri/curs-1'
                         },
                         {
                             label: 'Curs - 2',
@@ -59,8 +59,11 @@ export default defineComponent({
                 },
                 {
                     label: 'Intrebari frecvente',
-                    icon: 'pi pi-link',
                     route: '/intrebari-frecvente'
+                },
+                {
+                    label: 'Contact',
+                    route: '/contact'
                 },
             ]
         };

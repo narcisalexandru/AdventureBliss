@@ -11,7 +11,7 @@ import Menubar from 'primevue/menubar';
 import Button from 'primevue/button';
 import Rating from 'primevue/rating';
 import InputText from 'primevue/inputtext';
-import Textarea from 'primevue/textarea';
+import CustomTextarea from 'primevue/textarea';
 import CustomPanel from 'primevue/panel';
 
 
@@ -28,7 +28,7 @@ app.component('Menubar', Menubar);
 app.component('Button', Button);
 app.component('Rating', Rating);
 app.component('InputText', InputText);
-app.component('Textarea', Textarea);
+app.component('CustomTextarea', CustomTextarea);
 app.component('CustomPanel', CustomPanel);
 
 app.mount('#app')

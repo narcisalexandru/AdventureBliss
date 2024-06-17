@@ -17,7 +17,7 @@
             </div>
             <div class="flex flex-column gap-2 text-lg">
                 <label for="text">Lasa si un mesaj pentru noi.</label>
-                <Textarea v-model="comment" rows="3" cols="30" />
+                <CustomTextarea v-model="comment" rows="3" cols="30" />
                 <Button label="Trimite recenzia" @click="submitReview" />
             </div>
         </div>

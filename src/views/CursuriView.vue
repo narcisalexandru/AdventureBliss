@@ -5,7 +5,6 @@
             class="flex align-items-start justify-content-center text-7xl pt-6 banner-text-color bg-cover bg-center h-30rem w-full" 
             :style="{ backgroundImage: `url(${course.image})` }"
         >
-            <!-- <div>{{ course.name }}</div> -->
         </div>
     </div>
     <div class="flex text justify-content-center align-items-center m-4">
@@ -13,6 +12,10 @@
     </div>
     <div class="flex justify-content-start text align-items-center gap-8 w-12 h-screen p-8">
         <div class="max-w-4xl w-6 px-8 py-5 bg-color">
+            <!-- Introduction Section -->
+            <section class="mb-5">
+                <p class="text-xl text-justify">{{ course.introduction }}</p>
+            </section>
             <!-- Need Section -->
             <section class="mb-5">
                 <h2 class="text-3xl font-semibold mb-4">Lucruri Necesare</h2>
@@ -27,9 +30,8 @@
                     <li v-for="item in course.steps" :key="item">{{ item }}</li>
                 </ul>
             </section>
-            <!-- Introduction Section -->
-            <section class="mb-5">
-                <p class="text-xl">{{ course.introduction }}</p>
+            <section>
+                <div class="text-md text-white">Pentru un tutorial mai complex accesează videoclipul</div>
             </section>
             <!-- External Link Section -->
             <section class="mb-5 flex justify-content-end align-items-end">
@@ -46,9 +48,8 @@
                 </div>
             </section>
         </div>
-        <div class="flex justify-content-end align-items-end w-6">
-            <!-- Image for right part -->
-            <img :src="course.rightImage" alt="Right Part Image" class="h-full w-full object-cover">
+        <div class="flex justify-content-center align-items-end w-6">
+            <img :src="course.rightImage" alt="Camping foto" class="w-8 object-cover">
         </div>
     </div>
 </template>
@@ -57,7 +58,7 @@
 import { defineComponent, computed } from 'vue';
 import { useRoute } from 'vue-router';
 
-import { shelter } from '@/data/shelter';
+import { curs1 } from '@/data/curs1';
 import { curs2 } from '@/data/curs2';
 
 interface Course {
@@ -78,9 +79,8 @@ export default defineComponent({
         const route = useRoute();
 
         const courses: Record<string, Course> = {
-            'shelter': shelter,
+            'curs-1': curs1,
             'curs-2': curs2,
-            // Adaugă mai multe cursuri aici
         };
 
         const courseId = computed(() => {
