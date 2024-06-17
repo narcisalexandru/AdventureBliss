@@ -58,11 +58,6 @@ export default defineComponent({
                     ]
                 },
                 {
-                    label: 'Despre noi',
-                    icon: 'pi pi-link',
-                    route: '/despre-noi'
-                },
-                {
                     label: 'Intrebari frecvente',
                     icon: 'pi pi-link',
                     route: '/intrebari-frecvente'
