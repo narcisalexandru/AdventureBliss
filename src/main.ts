@@ -12,6 +12,7 @@ import Button from 'primevue/button';
 import Rating from 'primevue/rating';
 import InputText from 'primevue/inputtext';
 import Textarea from 'primevue/textarea';
+import CustomPanel from 'primevue/panel';
 
 
 import App from './App.vue'
@@ -28,5 +29,6 @@ app.component('Button', Button);
 app.component('Rating', Rating);
 app.component('InputText', InputText);
 app.component('Textarea', Textarea);
+app.component('CustomPanel', CustomPanel);
 
 app.mount('#app')

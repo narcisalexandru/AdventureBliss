@@ -14,11 +14,6 @@ const routes: Array<RouteRecordRaw> = [
         component: CursuriView
     },
     {
-        path: '/despre-noi',
-        name: 'despre-noi',
-        component: () => import('@/views/DespreNoiView.vue')
-    },
-    {
         path: '/intrebari-frecvente',
         name: 'intrebari-frecvente',
         component: () => import('@/views/IntrebariFrecventeView.vue')
