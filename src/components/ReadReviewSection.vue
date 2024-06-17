@@ -42,9 +42,7 @@ const fetchReviews = async () => {
         const response = await axios.get('http://localhost:8080/api/reviews');
         if (Array.isArray(response.data)) {
             reviews.value = response.data.filter(review => review.rating > 0);
-            // Sort reviews by id (assuming higher id means more recent)
             reviews.value.sort((a, b) => b.id - a.id);
-            // Get the latest 3 reviews
             latestReviews.value = reviews.value.slice(0, 3);
         } else {
             throw new Error('Data format is incorrect');
@@ -68,7 +66,9 @@ const handleReviewSubmitted = () => {
 
 <style>
 .cards {
+    color: #F9F6E7;
     background-color: #9bad7b;
-    width: 30%;
+    width: 350px;
+    height: 400px;
 }
 </style>

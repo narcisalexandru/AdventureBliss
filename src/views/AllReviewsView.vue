@@ -1,17 +1,20 @@
 <template>
-    <div class="flex flex-column gap-5 justify-content-center align-items-center section-background-text-color h-screen">
-        <div 
-            v-for="review in reviews" 
-            :key="review.id" 
-            class="flex flex-column justify-content-center align-items-center border border-round shadow-8 cards p-6 gap-5"
-        >
-            <h1 class="text-xl">{{ review.username }}</h1>
-            <Rating 
-                :value="review.rating"
-                readonly 
-                :cancel="false"
-            />
-            <div class="text-lg">{{ review.comment }}</div>
+    <div class="flex flex-column flex-wrap gap-5 justify-content-center align-items-center p-8">
+        <h1 class="text-white text-6xl">Parerile utilizatorilor nostri</h1>
+        <div class="flex flex-row flex-wrap gap-5 justify-content-center align-items-center px-8">
+            <div 
+                v-for="review in reviews" 
+                :key="review.id" 
+                class="flex flex-column justify-content-between align-items-center border border-round shadow-8 cards p-6 gap-5"
+            >
+                <h1 class="text-xl">{{ review.username }}</h1>
+                <Rating 
+                    v-model="review.rating"
+                    readonly 
+                    :cancel="false"
+                />
+                <div class="text-lg">{{ review.comment }}</div>
+            </div>
         </div>
     </div>
 </template>
@@ -34,7 +37,6 @@ const fetchReviews = async () => {
     try {
         const response = await axios.get('http://localhost:8080/api/reviews');
         
-        // Verificăm dacă response.data este un array
         if (Array.isArray(response.data)) {
             reviews.value = response.data.filter((review: Review) => review.rating !== null && review.rating !== undefined);
         } else {
@@ -50,15 +52,11 @@ const fetchReviews = async () => {
 onMounted(fetchReviews);
 </script>
 
-<style scoped>
-.section-background-text-color {
-    background: rgb(35,62,47);
-    background: radial-gradient(circle, rgba(83,111,96,1) 0%, rgba(35,62,47,1) 87%);
-    color: #F9F6E7;
-}
-
+<style>
 .cards {
+    color: #F9F6E7;
     background-color: #9bad7b;
-    width: 30%;
+    width: 350px;
+    height: 400px;
 }
 </style>
